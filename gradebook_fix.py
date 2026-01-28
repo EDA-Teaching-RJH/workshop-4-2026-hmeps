@@ -1,4 +1,5 @@
 def main():
+
     # Ask how many students are in the class
     student_count = int(input("How many students to enter? "))
 
@@ -9,9 +10,9 @@ def main():
     # Loop to get student details
     for i in range(student_count):
         print("Student: ",i + 1)
-        
+
         # Clean up the name input
-        name_input = str(input("Name: ").strip.title())
+        name_input = (input("Name: ")).strip().title()
         names.append(name_input)
 
         # Keep asking for score until valid (0-100)
@@ -33,7 +34,7 @@ def main():
     # Loop through the lists and print pass/fail
     # Pass mark is 40
     for i in range(len(names)):
-        if scores(i) < 40:
+        if scores[i] < 40:
             result = "Fail"
         else:
             result = "Pass"
