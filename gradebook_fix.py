@@ -5,9 +5,11 @@ def main():
     names = []
     scores = []
 
+#originally had print("student: "+ i + 1) so changed with a comma as you cant just + i
     for i in range(student_count):
         print("Student: ",i + 1)
 
+#had to express .strip() AND .title() as individual functions, NOT the same as names.append where .append() is the only function
         name_input = (input("Name: ")).strip().title()
         names.append(name_input)
 
@@ -25,6 +27,7 @@ def main():
 
     print("--- Class Summary ---")
     
+#the scores list uses [] but this bit originally had i in () instead so was an easy fix
     for i in range(len(names)):
         if scores[i] < 40:
             result = "Fail"
@@ -33,4 +36,5 @@ def main():
         
         print(f"{i + 1}: {names[i]} - {scores[i]} ({result})")
 
+#always remember to callback to main with () at the end when using functions
 main()
